@@ -20,7 +20,7 @@ public Plugin myinfo =
     name = "Marquee",
     author = "Original by Jannik \"Peace-Maker\" Hartung, Update/Rewrite by Koen",
     description = "Run text through the menu panel",
-    version = "1.0",
+    version = "1.0.1",
     url = "https://github.com/notkoen"
 };
 
@@ -88,7 +88,7 @@ public Action Cmd_Marquee(int client, int args)
     return Plugin_Handled;
 }
 
-stock bool Marquee_Start(int[] clients, int numClients, const char[] sBuffer, bool bIntercept = true)
+stock void Marquee_Start(int[] clients, int numClients, const char[] sBuffer, bool bIntercept = true)
 {
     // Put the message uppercase
     char sMessage[512], sChar[6];
@@ -167,7 +167,7 @@ stock bool Marquee_Start(int[] clients, int numClients, const char[] sBuffer, bo
 
     delete hPanel;
 
-    return true;
+    return;
 }
 
 stock void Marquee_Stop(int client)
